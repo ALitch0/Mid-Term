@@ -1,0 +1,13 @@
+body{
+    background-color: #E1BEE7;
+}
+fieldset{
+    border: none;
+}
+h1{
+    background-color: #9C27B0;
+    width: max-content;
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid black;
+}

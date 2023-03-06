@@ -6,19 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shows</title>
     <script src="js/app.js" defer></script>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <?php 
     //capturing the value using $_POST array and storing into a variable
     $name = $_POST['name'];
+    
     //connecting to database
     $db = new PDO('mysql:host=172.31.22.43;dbname=Alish200535161','Alish200535161','wXXqdNueNA');
+    
     //creating sql insert command
     $sql = "SELECT * FROM services WHERE name = :name;";
+    
     //preparing and binding sql insert
     $cmd=$db->prepare($sql);
     $cmd->bindParam(':name',$name,PDO::PARAM_STR);
     $cmd->execute();
+   
     //fetching data to service variable
     $service= $cmd->fetch();
     
