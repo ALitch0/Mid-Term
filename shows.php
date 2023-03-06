@@ -49,6 +49,7 @@
         <li><a href="delete.php?showId='.$show['showId'].'" onclick= "return confirmDelete();">'.$show['title'].'</a></li>
         ';
     }
+    echo '</ol>';
     ?>
 </body>
 </html>
